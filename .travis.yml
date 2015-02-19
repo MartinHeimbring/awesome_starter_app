@@ -1,18 +1,26 @@
 language: ruby
 rvm:
-  - 2.1.3
+- 2.1.2
 services:
-  - postgresql
-  - redis-server
-  - memcached
+- postgresql
+- redis-server
+- memcached
 env:
-  - RAILS_ENV=test
-bundler_args: --jobs=3 --retry=3 --deployment --without development production
+- RAILS_ENV=test
+- DB=postgresql
+bundler_args: "--jobs=3 --retry=3 --deployment --without development production"
 before_install:
-  - bundle config build.nokogiri --use-system-libraries
+- bundle config build.nokogiri --use-system-libraries
 before_script:
-  - bundle exec rake db:create db:structure:load
+- psql -c 'create database KoudokuTest_test' -U postgres
 script:
-  - bundle exec rspec spec
+- bundle exec rspec spec
 addons:
-  postgresql: "9.3"
+  postgresql: '9.3'
+deploy:
+  provider: heroku
+  api_key:
+    secure: WfgHJCTQu7Cw1wvqBNCWjN+07JztVavj/baDLPpY3078JSn090290+nnD36PczAStZiHxe1w2gV6aC7jKxTHJ6aMYK0wBWf3mGk/dprNBSw4cYXqwsPbIEBdO5FeAc3dvcua9EeinjVDFV5NEZKU+5iH0PH3NKXN9ZB+YTOGtxM=
+  app: koudokutest
+  on:
+    repo: MartinHeimbring/awesome_starter_app
