@@ -382,7 +382,7 @@ DEPENDENCIES
   pry-stack_explorer
   quiet_assets
   rack-timeout (~> 0.1.0beta4)
-  rails (~> 4.1.6)
+  rails (~> 4.1.4)
   rails_12factor
   rails_admin
   rb-fsevent

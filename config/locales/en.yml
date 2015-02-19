@@ -20,17 +20,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 
-#
-# TODO: Replace instances of 'StarterKit' in this file with your app brand name.
-#
 
 en:
   brand:
-    name: 'StarterKit'
+    name: 'KoudokuTest'
 
   emails:
     welcome:
-      subject: 'Welcome to StarterKit'
+      subject: 'Welcome to KoudokuTest'
 
   auth:
     login:
@@ -68,7 +65,7 @@ en:
       prompt: 'Disconnect this social account?'
       tooltip: 'Disconnect social account and remove related data'
       warning: ''
-      notice: 'Your social account will be disconnected form your StarterKit account. You can reconnect the social account at any time.'
+      notice: 'Your social account will be disconnected form this account. You can reconnect the social account at any time.'
       submit: 'Yes, disconnect the account'
       cancel: 'Cancel'
     reconnect:

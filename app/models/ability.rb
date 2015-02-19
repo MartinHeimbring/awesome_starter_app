@@ -10,13 +10,13 @@ class Ability
     can :manage, User, id: user.id
     can :manage, Authentication, user_id: user.id
 
-    if user.is_admin? && defined? RailsAdmin
+    if user.is_admin? #&& defined? RailsAdmin
       # Allow everything
       can :manage, :all
 
       # RailsAdmin
       # https://github.com/sferik/rails_admin/wiki/CanCan
-      # can :access, :rails_admin
+      can :access, :rails_admin
       # can :dashboard
 
       # RailsAdmin checks for `collection` scoped actions:
