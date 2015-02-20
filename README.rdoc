@@ -1,3 +1,5 @@
+{<img src="https://travis-ci.org/MartinHeimbring/awesome_starter_app.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/MartinHeimbring/awesome_starter_app]
+
 = Useful Commands
 
 Start sidekiq: bundle exec sidekiq
